@@ -1,0 +1,102 @@
+doctype html
+html(lang="en")
+	head
+		title= UserSettings
+		link(rel='stylesheet', href='userstylesheet.css')
+		script(type='text/javascript', src='http://code.jquery.com/jquery-latest.js')
+		script(src='javascripts/bootstrap.min.js')
+		script(src='settings.js')
+	body
+		div#settings
+			h3 User Settings
+			div#cs
+				form#input Current Spot:
+					input(type="text", name="spot")
+				button(id="setSpot") Set Spot
+				button(id="clear") Clear
+			div#actions
+				a#reminder Set Reminder
+				a#check Am I Okay?
+			div#permit
+				a Permit Type:
+				select(class="form-control")
+					option(value="None") None
+					option(value="NU-PERMIT-R") NU Permit R 
+					option(value="NU-PERMIT-VISITOR") NU Permit Visitor 
+					option(value="NU-STUDENT-PERMIT") NU Student Permit 
+					option(value="A") A
+					option(value="B") B
+					option(value="C") C
+					option(value="D") D
+					option(value="E") E
+					option(value="EVS") EVS
+					option(value="F") F
+					option(value="H") H
+					option(value="K") K
+					option(value="M") M
+					option(value="N") N
+					option(value="R") R
+					option(value="S") S
+					option(value="1") 1
+					option(value="2") 2
+					option(value="3") 3
+					option(value="4") 4
+					option(value="6") 6
+					option(value="7") 7
+					option(value="8") 8
+					option(value="9") 9
+					option(value="10") 10
+					option(value="11") 11
+					option(value="12") 12
+					option(value="14") 14
+					option(value="16") 16
+			div#faves
+				a Favorites:
+				table(class="table table-striped", id="faveTable")
+					tr
+						td#location1 2145 Sheridan Rd
+						td button#remove1 Remove
+					tr
+						td#location2
+						td button#remove2 Remove
+					tr
+						td#location3
+						td button#remove3 Remove
+				a#addFave Add Favorite
+			div#feedback
+			div(class="modal fade", id="myModal", role="dialog", aria-hidden="true")
+				div(class="modal-dialog")
+					div(class="modal-content")
+						div(class="modal-header")
+							button(type="button",class="close",id="closeTime") &times;
+							h4(class="modal-title") Set Reminder
+						div(class="modal-body")
+							form
+								fieldset
+									label(for="remindTime")Alert Time
+									input(type="time", name="alertTime", class="text ui-widget-content ui-corner-all", id="alertTime")
+									input(type="reset" value="Reset")
+						div(class="modal-footer")
+							button(type="button", class="btn btn-primary", id="save") Save Changes
+			div(class="modal fade", id="faveModal", role="dialog", aria-hidden="true")
+				div(class="modal-dialog")
+					div(class="modal-content")
+						div(class="modal-header")
+							button(type="button",class="close",id="closeFave") &times;
+							h4(class="modal-title") Add Favorite Spot Location
+						div(class="modal-body")
+							form
+								fieldset
+									label(for="faveAddress")New Favorite Address
+									input(type="text", name="faveAdd", class="text ui-widget-content ui-corner-all", id="faveAdd")
+									input(type="reset" value="Reset")
+						div(class="modal-footer")
+							button(type="button", class="btn btn-primary", id="saveFave") Save Changes
+
+
+
+
+
+
+
+
