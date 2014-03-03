@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>UserSettings</title>
+		<link rel="stylesheet" href="userstylesheet.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="javascripts/bootstrap.min.js"></script>
+		<script src="settings.js"></script>
+	</head>
+	<body>
+		<div id="settings">
+			<div id="header">
+				<a>User Settings</a>
+			</div>
+			<div id ="cs">
+				<form id="input">
+					Current Spot: <input id="spot" type="text" name="spot">
+					<!--<input type="submit" onclick = "setSpot()" value = "Set Spot">
+					<input type="reset" onclick = "clearSpot()" value = "Clear">-->
+					
+				</form>
+				<button id="setSpot">Set Spot</button>
+				<button id="clear">Clear</button>
+			</div>
+			<div id="actions">
+				<a id="reminder">Set Reminder</a>
+				<a id="check">Am I Okay?</a>
+			</div>
+			<div id="permit">
+				<a>Permit Type: </a>
+				<select class="form-control">
+					<option>None</option>
+					<option>A</option>
+					<option>B</option>
+					<option>C</option>
+					<option>D</option>
+					<option>E</option>
+					<option>EVS</option>
+					<option>EVS-2</option>
+					<option>F</option>
+					<option>G</option>
+					<option>H</option>
+					<option>K</option>
+					<option>M</option>
+					<option>N</option>
+					<option>R</option>
+					<option>S</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+					<option>11</option>
+					<option>12</option>
+					<option>14</option>
+					<option>16</option>
+				</select>
+			</div>
+			<div id="faves">
+				<a>Favorites: </a>
+				<table class="table table-striped" id="faveTable">
+					<tr>
+						<td id="location1">2145 Sheridan Rd</td>
+						<td><button id="remove1">Remove</button></td>
+					</tr>
+					<tr>
+						<td id="location2"></td>
+						<td><button id="remove2">Remove</button></td>
+					</tr>
+					<tr>
+						<td id="location3"></td>
+						<td><button id="remove3">Remove</button></td>
+					</tr>
+				</table>
+				<a id="addFave">Add Favorite</a>
+			</div>
+			<div id="feedback">
+			</div>
+			<div class="modal fade" id="myModal" role="dialog" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" id="closeTime">&times;</button>
+							<h4 class="modal-title">Set Reminder</h4>
+						</div>
+						<div class="modal-body">
+							<form>
+								<fieldset>
+									<label for="remindTime">Alert Time</label>
+									<input type="time" name="alertTime" class="text ui-widget-content ui-corner-all" id="alertTime">
+									<input type="reset" value="Reset">
+								</fieldset>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" id="save">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="faveModal" role="dialog" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" id="closeFave">&times;</button>
+							<h4 class="modal-title">Add Favorite Location</h4>
+						</div>
+						<div class="modal-body">
+							<form>
+								<fieldset>
+									<label for="faveAddress">New Favorite Address</label>
+									<input type="text" name="faveAdd" class="text ui-widget-content ui-corner-all" id="faveAdd">
+									<input type="reset" value="Reset">
+								</fieldset>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" id="saveFave">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
